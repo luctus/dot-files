@@ -18,6 +18,9 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'ruanyl/vim-gh-line'
   " autocomplete"
   Plug 'ervandew/supertab'
+
+  " browse current directory
+  Plug 'tpope/vim-vinegar'
 " }
 
 call plug#end()
@@ -204,6 +207,9 @@ let mapleader="\<SPACE>"
     let g:netrw_winsize=80  " only use 20% screen for netrw
     " FIXME: Preview opens to left and is very narrow
     let g:netrw_preview=1   " open previews vertically
+  " }
+  "Vinegar {
+    let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+' " exclude dot files (Press gh to toggle dot files hiding)
   " }
 " }
 
