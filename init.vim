@@ -11,15 +11,22 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'neomake/neomake'
   " rails plugins
   Plug 'tpope/vim-rails'
+  " git wrapper (:Gblame :Gstatus etc)
   Plug 'tpope/vim-fugitive'
+  " syntax support for haml templates
   Plug 'tpope/vim-haml'
+  " syntax support for slim templates
+  Plug 'slim-template/vim-slim'
+  " adds `end` automatically
   Plug 'tpope/vim-endwise'
+  " comment lines with :gc
+  Plug 'tpope/vim-commentary'
   " opens current line in GitHub
   Plug 'ruanyl/vim-gh-line'
   " autocomplete"
   Plug 'ervandew/supertab'
 
-  " browse current directory
+  " browse current directory (<leader>-)
   Plug 'tpope/vim-vinegar'
 " }
 
