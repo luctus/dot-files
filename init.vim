@@ -5,8 +5,9 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'ctrlpvim/ctrlp.vim'
   " airline is a better status line and a tab-bar for nvim.
   Plug 'bling/vim-airline'
-  " gruvbox colorscheme. Seems to work the best for me.
-  Plug 'morhetz/gruvbox'
+  Plug 'vim-airline/vim-airline-themes'
+  " Cobalt colorscheme. Seems to work the best for me.
+  "Plug 'herrbischoff/cobalt2.vim'
   " neomake is a code linting tool that runs in the background.
   Plug 'neomake/neomake'
   " rails plugins
@@ -70,7 +71,7 @@ let mapleader="\<SPACE>"
 
   set noerrorbells        " No beeps.
   set modeline            " Enable modeline.
-  set esckeys             " Cursor keys in insert mode.
+  "set esckeys             " Cursor keys in insert mode.
   set linespace=0         " Set line-spacing to minimum.
   set nojoinspaces        " Prevents inserting two spaces after punctuation on a join (J)
 
@@ -132,12 +133,19 @@ let mapleader="\<SPACE>"
   " Diff options
   set diffopt+=iwhite
 
+  " Keep selected the text after moving with < or >
+  vnoremap < <gv
+  vnoremap > >gv
+
+  " Quickly select the text that was just pasted. This allows you to, e.g.,
+  " indent it after pasting.
+  noremap gV `[v`]
 " }
 
 " UI Options {
   " Colorscheme options.
   set bg=dark
-  colorscheme gruvbox
+  "colorscheme cobalt2
 
   " Also highlight all tabs and trailing whitespace characters.
   highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
@@ -193,7 +201,7 @@ let mapleader="\<SPACE>"
     let g:airline_left_alt_sep = ''
     let g:airline_right_sep = ''
     let g:airline_right_alt_sep = ''
-    let g:airline_theme= 'gruvbox'
+    let g:airline_theme= 'cobalt2'
   " }
   " CtrlP {
     " Open file menu
