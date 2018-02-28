@@ -29,6 +29,9 @@ call plug#begin('~/.config/nvim/plugged')
 
   " browse current directory (<leader>-)
   Plug 'tpope/vim-vinegar'
+  
+  " time tracker
+  Plug 'wakatime/vim-wakatime'
 " }
 
 call plug#end()
